@@ -1,0 +1,135 @@
+/* Genel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+/* Form Stilleri */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+input {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Bar ve Çizgi Stilleri */
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #244176, #091d43, #151b26, #c11e43);
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    box-sizing: border-box;
+}
+
+.separator {
+    position: absolute;
+    height: 40px;
+    width: 4px;
+    background-color: #ff5722;
+    border-radius: 2px;
+    transition: left 0.9s ease;
+    z-index: 2; /* Separator, barın üstünde yer alır */
+}
+
+/* Kategori Metinleri */
+.progress-bar-labels{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    width: 100%; /* Metinlerin bar boyunca yayılması için tam genişlik */
+    padding: 0 10px; /* Kenarlardan biraz boşluk */
+    position: absolute;
+}
+.progress-bar-labels span {
+    text-align: center;
+    width: 20%; /* Tüm metinleri eşit hizalar */
+}
+
+/* Sonuç Bilgisi */
+.result-info {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+.result-info, .result-title {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.progress-bar-container .icons .normal-weight .red-img, 
+.progress-bar-container .icons .overweight .red-img, 
+.progress-bar-container .icons .super-fat .red-img, 
+.progress-bar-container .icons .thin-active .red-img {
+    display: none;
+}
+.progress-bar-container .icons .thin-active {
+    position: absolute; /* Pozisyon belirtilmeli */
+    left: 20%; /* İstediğiniz pozisyon */
+}
+.progress-bar-container .icons .normal-weight {
+    position: absolute; /* Pozisyon belirtilmeli */
+    left: 40%; /* İstediğiniz pozisyon */
+}
+.progress-bar-container .icons .overweight {
+    position: absolute; /* Pozisyon belirtilmeli */
+    left: 60%; /* İstediğiniz pozisyon */
+}
+.progress-bar-container .icons .super-fat {
+    position: absolute; /* Pozisyon belirtilmeli */
+    left: 80%; /* İstediğiniz pozisyon */
+}

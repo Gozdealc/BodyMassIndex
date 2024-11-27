@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <main>
+        <h1>Body Mass Index</h1>
+        <form>
+            <div id="input-container">
+                <div class="values-input">
+                    <label class="calculation-input" for="weight-input">Kilonuz:</label>
+                    <input 
+                        required 
+                        type="number" 
+                        class="calculation-control" 
+                        id="weight-input" 
+                        name="weight" 
+                        value="" 
+                        min="1" 
+                        step="0.1" 
+                    />
+                    <label class="calculation-input" for="height-input">Boyunuz(cm):</label>
+                    <input 
+                        required 
+                        type="number" 
+                        class="calculation-control" 
+                        id="height-input" 
+                        name="height" 
+                        value="" 
+                        min="1" 
+                        step="0.1" 
+                    />
+                </div>
+                <div class="gender-input">
+                    <legend>Cinsiyetiniz:</legend>
+                    <label for="woman">
+                        <input type="radio" id="woman" name="gender" value="woman" /> Kadın
+                    </label>
+                    <label for="man">
+                        <input type="radio" id="man" name="gender" value="man" /> Erkek
+                    </label>
+                </div>
+                <div class="hesapla-input">
+                    <button type="button" id="calculate-btn">Hesapla</button>
+                </div>
+            </div>        
+        </form>
+
+        <div id="result" class="result-output">
+                <div class="result-title">Vücut Kitle İndeksiniz : <span id="calcIndex" class="result-color">0</span></div>
+                <div class="result-info js-result-title">-</div>
+                <div class="progress-bar-container black-red-gradient">
+                    <div class="progress-bar-gradient-wrapper">
+                        <div class="progress-bar-gradient"></div>
+                    </div>
+                    <span class="separator js-separator" style="left: 1%;"></span>
+                    <div class="icons js-icons">
+                        <span class="thin-active">
+                            <img class="gray-img" alt="" src="https://cdn.memorial.com.tr/files/images/thin-gray.svg">
+                            <img class="red-img" alt="" src="https://cdn.memorial.com.tr/files/images/thin-red.svg">
+                        </span>
+                        <span class="normal-weight">
+                            <img class="gray-img" alt="" src="https://cdn.memorial.com.tr/files/images/normal-weight-gray.svg">
+                            <img class="red-img" alt="" src="https://cdn.memorial.com.tr/files/images/normal-weight-red.svg">
+                        </span>
+                        <span class="overweight">
+                            <img class="gray-img" alt="" src="https://cdn.memorial.com.tr/files/images/overweight-gray.svg">
+                            <img class="red-img" alt="" src="https://cdn.memorial.com.tr/files/images/overweight-red.svg">
+                        </span>
+                        <span class="super-fat">
+                            <img class="gray-img" alt="" src="https://cdn.memorial.com.tr/files/images/super-fat-gray.svg">
+                            <img class="red-img" alt="" src="https://cdn.memorial.com.tr/files/images/super-fat-red.svg">
+                        </span>
+                    </div>
+                    <div class="progress-bar-labels">
+                        <span>Zayıf</span>
+                        <span>Normal Kilolu</span>
+                        <span>Fazla Kilolu</span>
+                        <span>Obez</span>
+                        <span>Aşırı Obez</span>
+                    </div>
+                </div>      
+        </div>
+    </main>
+    <script src="./index.js"></script> 
+</body>
+</html>
+
